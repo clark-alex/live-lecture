@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans');
+@import 'variables';
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'PT Sans', sans-serif;
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    background: $white;
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight: 800;
+    padding: 10px;
+}
