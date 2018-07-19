@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import {getUser} from '../ducks/reducer';
+import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,14 +35,18 @@ export default class Login extends Component {
         this.setState({ warning })
         return warning ? false : true
     }
+    successRedirect(){
+        this.props.getUser()
+        this.props.history.push('/dashboard')
+    }
     login = () => {
         const body = {
             username: this.state.username,
             password: this.state.password
         }
         this.formValidation() ?
-            axios.post('/api/login', body).then((res) => {
-                res.data === 'welcome' ? this.props.history.push('/dashboard') : ''
+            axios.post('/auth/login', body).then((res) => {
+                res.data === 'welcome' ?  this.successRedirect(): ''
             })
             : null
     }
@@ -52,7 +58,7 @@ export default class Login extends Component {
             status: status
         }
         this.formValidation() ?
-            axios.post('/api/register', body).then(() => this.props.history.push('/dashboard'))
+            axios.post('/auth/register', body).then(() => this.successRedirect())
             : null
     }
     handleInput = (e) => {
@@ -120,3 +126,9 @@ export default class Login extends Component {
         )
     }
 };
+function mapStateToProps(state){
+    return{
+        user:state.user
+    }
+} 
+export default connect(mapStateToProps, {getUser})(Login)

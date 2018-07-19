@@ -8,8 +8,8 @@ export default class Main extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path='/' component={Login}/>
-                    <Route path='/dashboard' component={Dashboard}/>
+                    <Route exact path='/' component={Login} />
+                    <Route path='/dashboard' component={Dashboard} />
                 </Switch>
             </div>
         )

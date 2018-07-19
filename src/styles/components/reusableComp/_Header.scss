@@ -1,0 +1,26 @@
+@import '../../_variables.scss';
+@import '../../_mixins.scss';
+
+.contactBar{
+    height: 30px;
+    width: 100vw;
+    margin: 0;
+    background: $grey;
+    justify-content:space-around;
+    align-items: center;
+    font-weight: 300;
+    font-size: 10px;
+    color: $white;
+    @include flexRow();
+}
+span{
+    padding: 5px;
+    color: var(--accent)
+}
+
+  .loginSection{
+      transform: translate(20px,0px)
+  }
+  .contactSection{
+      transform: translate(-20px,0px)
+  }

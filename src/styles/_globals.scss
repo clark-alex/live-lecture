@@ -14,3 +14,18 @@ h1{
     font-weight: 800;
     padding: 10px;
 }
+
+button{
+    outline: none;
+    border: none;
+    background: $main1;
+    color: $white;
+    margin:0px 8px 0px 8px;
+    padding:5px 10px 5px 10px;
+    font-weight: 500;
+    transition: .2s;
+    border-radius: 3%;
+  }
+  button:hover{
+    background: $main2;
+  }

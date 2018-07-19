@@ -5,7 +5,8 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , questions_ctrl = require('./questions_ctrl')
     , checkUserSession = require('./middleware/checkForUserSession')
-    , authController = require('./authController')
+    , authCtrl = require('./controllers/authController')
+    , apiCtrl = require('./controllers/apiController')
 
 const app = express()
 app.use(bodyParser.json())
@@ -30,8 +31,11 @@ massive(CONNECTION_STRING).then(db => {
 })
 
 // ====== auth endpoints =====
-app.post('/api/login', authController.loginUser)
-app.post('/api/register', authController.registerUser)
+app.post('/auth/login', authCtrl.loginUser)
+app.post('/auth/register', authCtrl.registerUser)
+
+// ====== api endpoints ======
+app.get('/api/getUser', apiCtrl.getCurrentUser)
 
 
 
