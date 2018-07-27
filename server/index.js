@@ -33,9 +33,11 @@ massive(CONNECTION_STRING).then(db => {
 // ====== auth endpoints =====
 app.post('/auth/login', authCtrl.loginUser)
 app.post('/auth/register', authCtrl.registerUser)
+app.get('/auth/logout', authCtrl.logout) 
 
 // ====== api endpoints ======
 app.get('/api/getUser', apiCtrl.getCurrentUser)
+app.get('/api/userLectures', apiCtrl.getUserLectures)
 
 
 

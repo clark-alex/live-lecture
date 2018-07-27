@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans');
 @import 'variables';
+@import 'mixins';
 
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'PT Sans', sans-serif;
@@ -8,6 +9,7 @@ body{
     font-family: 'PT Sans', sans-serif;
     background: $white;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 h1{
@@ -25,7 +27,42 @@ button{
     font-weight: 500;
     transition: .2s;
     border-radius: 3%;
+    @include flexRow();
+    align-items: center;
+    cursor: pointer;
+
   }
   button:hover{
     background: $main2;
+    // color: $main1;
   }
+.seperate{
+    width: 100%;
+    @include flexRow;
+    justify-content: center;
+    div{
+        border-radius: 150px;
+        background: linear-gradient(to right, #ffffff00, #747f9a, #ffffff00);
+        width: 80%;
+        height: 3px;
+    }
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+input{
+    font-size: 25px;
+    border:none;
+    outline: none;
+    background: none;
+    text-align: center
+
+}
+::placeholder {
+    @include flexColumn();
+    text-align: center;
+}
+input:hover{
+    border: solid 2px $main2
+}

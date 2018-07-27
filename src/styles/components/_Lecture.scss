@@ -1,0 +1,19 @@
+@import '../_variables.scss';
+@import '../_mixins.scss';
+.editLectureWrapper{
+    width: 85vw;
+    height: 100vw;
+    float: right;
+    @include flexColumn();
+    align-items: center;
+    background: $lightGray;
+    header{
+        @include flexRow();
+        justify-content: space-around;
+        width: 100vw;
+    }
+    // input{
+    //     background: none;
+    //     border: none;
+    // }
+}

@@ -9,7 +9,7 @@
     height: 500px;
     width: 40%;
     border-radius: 15px;
-    @include shadow($grey);
+    @include shadow($gray);
     h1{
         position: relative;
         height:20px;
@@ -25,7 +25,7 @@
     h2{
         cursor: pointer;
         font-size: 24px;
-        color:lighten($grey, 30%);
+        color: $gray;
         transition: .2s;
     }
     h2:hover{
@@ -33,19 +33,7 @@
         font-weight: 900;
         font-size: 32px;
     }
-    input{
-        font-size: 25px;
-        border:none;
-        outline: none;
-
-    }
-    ::placeholder {
-        @include flexColumn();
-        text-align: center;
-    }
-    input:hover{
-        border: solid 2px $main2
-    }
+   
 }
 .loginBody{
     @include flexColumn();

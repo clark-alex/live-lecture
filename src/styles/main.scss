@@ -14,7 +14,10 @@
 
 @import './components/_App';
 @import './components/Login';
+@import './components/_dashboard.scss';
+@import './components/_Lecture.scss';
 
 // ==== REUSABLE COMPONENTS === //
 
-@import './components/reusableComp/_Header.scss'
+@import './components/reusableComp/_Header.scss';
+@import './components/reusableComp/_SideBar.scss';

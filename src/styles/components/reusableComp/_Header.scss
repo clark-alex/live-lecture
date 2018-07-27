@@ -1,26 +1,36 @@
 @import '../../_variables.scss';
 @import '../../_mixins.scss';
-
-.contactBar{
-    height: 30px;
+.contactWrapper{
+    height: 40px;
     width: 100vw;
+    @include flexRow();
+    // justify-content: flex-start;
     margin: 0;
-    background: $grey;
+    font-size: 20px;
+   
+}
+.contactBar{
+    background: $gray;
+    width: 85vw;
     justify-content:space-around;
     align-items: center;
     font-weight: 300;
-    font-size: 10px;
     color: $white;
     @include flexRow();
+}
+.sidebarPlaceholder{
+    width : 15vw;
 }
 span{
     padding: 5px;
     color: var(--accent)
 }
 
-  .loginSection{
-      transform: translate(20px,0px)
+  .headerSection{
+     width: 20vw;
+     height:100%;
+     @include flexRow;
+     justify-content: center;
+     align-items: center;
   }
-  .contactSection{
-      transform: translate(-20px,0px)
-  }
+  

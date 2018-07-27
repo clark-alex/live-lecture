@@ -42,5 +42,10 @@ module.exports = {
             }
         })
     },
+    logout: (req,res) => {
+        const db = req.app.get('db')
+        req.session.destroy()
+        res.status(200).send('successful logout')
+    }
 
 }

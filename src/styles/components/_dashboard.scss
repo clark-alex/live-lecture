@@ -1,0 +1,72 @@
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.lectureCard{
+    position: relative;
+    height: 20vw;
+    width: 20vw;
+    margin-top: 5vh;
+    border-radius: 1%;
+    background: $white;
+    box-shadow: 2px 2px 8px 0px $gray;
+    transition: .2s;
+    color: $gray;
+    cursor: pointer;
+    i{
+        color: $gray;
+        font-size: 200px;
+        transition: .2s;
+    }
+    h1{
+        color:$white
+    }
+}
+.addCard{
+    @include flexRow();
+    justify-content: center;
+    align-items: center;
+}
+.lectureCard:hover{
+    box-shadow: 2px 2px 15px 3px $gray;
+    i{
+        color:$main1;
+    }
+}
+.dashboardWrapper{
+    @include flexRow();
+    justify-content: space-around;
+    position: relative;
+    left: 15vw;
+    height: 100vh;
+    width: 85vw;
+    background: $lightGray;
+    overflow: hidden;
+}
+.red{
+    background:$red
+}
+.orange{
+    background:$orange
+
+}
+.yellow{
+    background:$yellow
+}
+.green{
+    background:$green
+
+}
+.blue{
+    background:$blue
+
+}
+.indigo{
+    background:$indigo
+
+}
+.violet{
+    background:$violet
+}
+.default{
+    background:$main1
+}
